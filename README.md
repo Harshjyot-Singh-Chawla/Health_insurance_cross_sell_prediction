@@ -1,139 +1,138 @@
-# HEALTH-INSURANCE-CROSS-SELL-PREDICTION
-A model to predict whether a customer already owning a health insurance would be interested in Vehicle Insurance or not
-# Project Summary :
-### Problem Statement :
-The task is to use existing Health and Vehicle Insurance Customer Data to predict whether the any new Customers are open to purchasing Vehicle Insurance from this company .
 
-### About the Data :
-We have the data of existing Health Insurance Customers , this Data includes 12 relevant data points such as age, gender, sales channel data, vehicle ownership data. And most importantly , the target variable : whether the customer has vehicle insurance or not . The Data is available for 390K existing customers .
 
-### Approach taken :
-The task was divided into 2 main parts : 1.Statistical Analysis over the dataset to discover relationships between each feature and the target variable . So that this relationship information can be used by the management in making better Business decisions 2.Creating a Machine Learning Pipeline , that can take in the data of any new customer and predict whether they will be interested in vehicle insurance . It was required to kepp this pipeline modular , such that it can be retrained often when new data is collected
+<h1 align="center"> Health Insurance Cross Sell Prediction
+ </h1>
 
-### Technical Details for ML : We trained 5 Different Algorithms
-( Logistic Regression , K-Nearest Neighbors , Random Forest , XGBoost and CatBoost ) We used GridSearchCV and BayesSearchCV for HyperParameter Tuning Comparing both F1 and AUC-ROC Score , we can see that Random Forrest and XGBoost model performs the best . Best AUC-ROC = 0.86 , Best F1=0.44
+<h3 align="center"> AlmaBetter Verfied Project - <a href="https://www.almabetter.com/"> AlmaBetter School </a> </h5>
 
-### Conclusions : Insights from exploring the Data :
-* Customers of age between 30 and 70 are more likely to buy insurance. 
-* Customers with Driving Licence have higher chance of buying Insurance. 
-* Customers with Vehicle Damage are more likely to buy insurance. 
-* Customers with Vehicle age between 1 and 2 years are more likely to interested. 
-* Customer who are not insured previously are more likely to be interested.
 
-## Python Libraries used
-Datawrangling :
+![image](https://www.recruiter.com//recruiting/wp-content/uploads/2019/02/blocks.png)
 
-* Numpy
-* Pandas
-For Graphing :
 
-* Matplotib
-* Seaborn
-Machine learning :
+<p> </p>
 
-* Scikit-Learn
-* SK-Opt
-* XGBoost
-* CatBoost
-Miscellaneous :
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-* Google colab tools
-# Getting Started
-1. Clone this repo (for help see this tutorial).
-2. Raw Data is being kept here within GDrive
-3. Data processing/transformation scripts are being kept [here](Repo folder containing data processing scripts/notebooks)
+<h2> :floppy_disk: Table of Content</h2>
 
-# The Structure of the main IPYNB notebook :
-* About this Project
+  * [Introduction](#Introduction)
+  * [Abstract](#Abstract)
+  * [Dataset Information](#dataset-information)
+  * [Problem Statement](#Problem-Statement)
+  * [Conclusion](#Conclusion)
 
-* Problem Statement
 
-*Buisness Goal
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-* Approach Taken in this Project
 
-* Understanding the given Data
-* Initial Code : Initliaing the Data and Modules
+<h2> :book: Introduction:</h2>
 
-Installing and Importing Libraries
 
-Import Dataset and Initial Data Checks
-* Data Preparation and Cleaning
 
-*Exploratory Data Analysis
+* Insurance is a contract, represented by a policy, in which an individual or entity receives financial protection or reimbursement against losses from an insurance company.
 
-Initial Macro-Level Data Analysis
+* This EDA will use Python libraries, matplotlib, and Seaborn to examine the Subscribed health insurance customers dataset through visualizations and graphs. 
 
-Variable wise EDA
-1. Target Variable (Response)
-2. Age variable
-3. Annual_Premium
-4. Gender variable
-5. Driving License
-6. Previously Insured
-7. Vehicle Age
-8. Vechicle damage
-9. Vintage
-10. Region Code
-11. Policy Sales Channel
+* The dataset is of  Subscribed Health insurance customers from insurance companies, contains information such as Age, Gender, Driving Licence, Region Etc.
 
-Correlation Plot for Numeric Features
+* Machine learning has a wide range of applications in our organization. Prediction and analysis has long been the most well-known application of machine learning, which fuels our sale prediction. 
 
-* Data Preprocessing and Feature Engineering
+* We're also utilizing machine learning to assist in designing our Sale strategies and Campaign programmes by identifying traits that lead to successful content.
 
-Outlier Treatment in feature : Annual_Premium
-Label Encoding
-Target Mean Encoding
-Cleaned Data Exporting
-Building Prediction Systems using ML Models
+*  We utilize it to help Company's to rapidly expand their reach to customers with appropriate data driven decisions.
 
-Import cleaned final data
+* We can also employ machine learning to improve Service and Customer retention, Target oriented promotions.
 
-Classifier Performance Reporting Function
+* Our major goal in this project is to identify Customers who are interested in purchasing vehcle insurance based on subscribed health insurance data of the company.
 
-* Overfitting Underfitting Debugging Notes
-* Metrics to be used during HyperParameter
-* Random Forrest Specific Cutom Defined Metrics
-* Function Definations for Analytics report generation
+![dataset-cover](https://user-images.githubusercontent.com/95616692/167281635-1074557a-3b50-41b2-9ef7-957765cc49c2.jpg)
 
-Logistic Regression Classifier Algorithm:
 
-* LR Classifier Generator Function:
-* LR Hyper Parameter Tuning : GridSearch
-* Final Logistic Regression Training run
 
-K Nearest Neighbours Classifier Algorithm:
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-* Default Parameters : KNeighborsClassifier
-* KNN Model Generator Funciton
-* KNN Hyper Parameter Tuning : GridSearch
-* Final KNN Training run
 
-Random Forrests of Decsision Trees:
+<h2> :book: Abstract:</h2>
 
-* Default Parameters : RandomForestClassifier
-* Base Estimator Generator Function
-* HyperParameter tuning using GridSearchCV
-* Final Training Run
-* Gradient Boosted Trees using XGBoost Library
+* The objective was to anticipate Customers who are interested in purchasing vehcle insurance.
 
-XGBoost algorithn training and tuning notes:
+* Exploratory Data Analysis is done on the dataset to get the insights from the information however the principal invalid qualities are taken care of. Likewise, some hypothesis testing was additionally performed from the experiences from EDA.
 
-* XGBoost Estimator Instance Generator Function
-* HyperParameter tuning using BayesSearchCV
-* Final Training Run for XGBoost
-* Feature Importance
+* After that Response variable is our objective variable must be highlighted where Analysis activities are performed on it and after that visualization has done for it to understand hidden insights. 
 
-Categorical Gradient Boosted Trees using CatBoost Library:
+* From that point forward, all that was left was to track down the important factors and feature encoding and fit our models by creating various features, and further, the model is assessed utilizing the metrics.
 
-* Cleaning Raw Data with Categorical Encoding
-* CatBoost Estimator Instance Generator Function
-* Model Evaluation
-* Final Training Run for CatBoost
-* Feature Importance
-* Inferences and Conclusions
 
--What Worked? What Did Not Work?
 
--Future Work and More Ideas to Explore
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+
+<h2> :book: Dataset information:</h2>
+
+
+* id - A unique id for each customer.
+
+
+* Gender - Gender details of the health insurance owner.
+
+
+* Age - Age details of the health insurance owner.
+
+
+* Driving_License - Whether the customer has a driving license or Not.
+
+
+* Region Code - Region with code details of the health insurance owner.
+
+
+* Previously_Insured -Whether the customer previously_Insured or Not.
+
+
+* Vehicle_Age - Age of vehicle of the health insurance owner.
+
+
+
+* Vehicle_Damage - Whether the customer Vehicle Damaged or Not.
+
+
+* Annual Premium - Annual Premium amount details of a Customer.
+
+
+* Policy_Sales_Channel - Policy Sales Channel shows us,the number of the sales channel. 
+
+
+* Response - Response of the customer to buying vehicle insurance.
+
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+<h2> :book: Problem Statement:</h2>
+
+* This dataset consists information Subscribed Health insurance customers from insurance company. 
+
+* The dataset is provided by the insurance company.
+
+* They are expanding their services to vehicle insurance from Health insurance.
+
+* The task was to predict and build the model to understand the factors and customers who are interested in vehicle insurance. 
+
+* It will be interesting to explore what all other insights can be obtained from the same dataset.
+
+* Integrating the factors affecting the purchase and insights from the data, will help companie to identify strategies and expand there reach to customer.
+
+
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+<h2> :book: Conclusion:</h2>
+
+* Our main goal in this project was to determine different factors based on response, which we have done.
+
+* After fitting different models, we did hyperparameter tunig for better results.
+
+* which we evaluated using the different evaluation metrics.
+
+* Comparing the ROC curve we concluded that the Random Forest model performs better..
+
+
 
